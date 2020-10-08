@@ -150,8 +150,17 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
-
+function finder (arr) { 
+    let randomNumber = getRandomArbitrary() 
+    for (let i = 0; i < arr.length; i++){
+      if (randomNumber === arr[i]){
+         true
+      } else{
+         false
+      }
+      
+}
+}
 
 ////////// PROBLEM 8 //////////
 
