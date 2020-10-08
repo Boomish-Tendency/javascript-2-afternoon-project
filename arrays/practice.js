@@ -37,7 +37,7 @@ var arr = [40,50,60];
 //Code Here
 function last (arr) {
   return arr[2]
-}
+};
 
 
 ////////// PROBLEM 3 //////////
@@ -125,10 +125,10 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-function divider (numbersArray) {
-  let even = numbersArray.filter(function(num) {return num % 2 === 0})
-  let odd = numbersArray.filter(function(num) {return num % 2 !== 0})
-  return [even, odd]
+// function divider (numbersArray) {
+//   let even = numbersArray.filter(function(num) {return num % 2 === 0})
+//   let odd = numbersArray.filter(function(num) {return num % 2 !== 0})
+//   return [even, odd]
 
 
 ////////// PROBLEM 7 //////////
@@ -150,17 +150,16 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-function finder (arr) { 
-    let randomNumber = getRandomArbitrary() 
-    for (let i = 0; i < arr.length; i++){
-      if (randomNumber === arr[i]){
-         true
-      } else{
-         false
-      }
-      
-}
-}
+// function finder (arr) { 
+//     let randomNumber = getRandomArbitrary() 
+//     for (let i = 0; i < arr.length; i++){
+//       if (randomNumber === arr[i]){
+//          true
+//       } else{
+//          false
+//       }
+//     }
+//   };
 
 ////////// PROBLEM 8 //////////
 
@@ -213,7 +212,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+//Code Here 
 
 
 
