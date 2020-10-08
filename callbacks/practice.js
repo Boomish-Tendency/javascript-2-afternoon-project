@@ -29,7 +29,7 @@
 
 // Code Here 
 function first(arr, cb){
-    cb(arr)
+    cb(arr[0])
 };
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -51,7 +51,7 @@ first(names, function(firstName){
 
 //Code Here
 function last(arr, cb){
-  cb(arr.length-1)
+  cb(arr[arr.length-1])
 }
 // Do not edit the code below.
 last(names, function(lastName){
@@ -91,6 +91,15 @@ function multiply (num1, num2, cb) {
 */
 
 //Code Here 
+function contains (arr, name, cb) {
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] === name) {
+      cb(true)
+    } else {
+      cb(false)
+    }
+  }
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
@@ -118,6 +127,29 @@ uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
 });
 // Do not edit the code above.
+
+
+function uniq (arr, cb) {
+    let tempArray = []
+    arr.forEach(element => {
+      if(!tempArray.includes(element)){
+        tempArray.push(element)
+      }
+    });return cb(tempArray)
+  };
+      
+
+// function uniq (arr, cb) {
+
+//   for(i = 0; i < arr.length; i++){
+//   for(y = i + 1; y < arr.length; y++){
+//   if(arr[i] === arr [y]){
+//   arr.splice(i,1) y--
+//       }
+//     }
+//    } cb(arr)
+//   }
+
 
 
 

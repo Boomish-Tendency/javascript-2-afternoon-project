@@ -55,6 +55,7 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 function looper (family) {
   for (let i = 0; i < family.length; i++) {
     alert(family[i])
+  }
 };
 
 
@@ -94,9 +95,9 @@ function evenFinder (nums) {
     let newArray =[]
     for (let i = 0; i < nums.length; i++){
       if (nums[i] % 2 === 0) {
-        return newArray.push(nums[i]);
+         newArray.push(nums[i]);
       }
-    }
+    } return newArray
 }
 
 
@@ -125,11 +126,11 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-// function divider (numbersArray) {
-//   let even = numbersArray.filter(function(num) {return num % 2 === 0})
-//   let odd = numbersArray.filter(function(num) {return num % 2 !== 0})
-//   return [even, odd]
-
+ function divider (numbersArray) {
+  let even = numbersArray.filter(function(num) {return num % 2 === 0})
+  let odd = numbersArray.filter(function(num) {return num % 2 !== 0})
+  return [even, odd]
+ }
 
 ////////// PROBLEM 7 //////////
 
