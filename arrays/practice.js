@@ -199,7 +199,7 @@ function removeItem (myGroceryList, item) {
   if (myGroceryList && item){
     for (i=0;i<myGroceryList.length;i++) {
     if (myGroceryList[i] === item) {
-      myGroceryList.splice(myGroceryList[i],1)
+      myGroceryList.splice(i,1)
     }
   } return myGroceryList}
  else {
@@ -246,7 +246,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here 
-
+function addTen (numbers) {
+    forcedNumber = []
+    for (i=0;i<numbers.length;i++){
+      forcedNumber.push(Number(numbers[i]));
+      forcedNumber[i] += 10
+    }
+    return forcedNumber
+};
 
 
 ////////// PROBLEM 11 //////////
@@ -272,6 +279,15 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
+let longer = (arr1, arr2) => (arr1.length > arr2.length) ?  arr1 :  arr2;
+
+// function longer (arr1, arr2) {
+//   if (arr1.length > arr2.length) {
+//     return arr1
+//   } else{
+//     return arr2
+//   }
+// };
 
 
 /*
@@ -283,7 +299,10 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function both (arr1, arr2) {
+    let newArray = arr1.filter(element => arr2.includes(element));
+    return newArray
+}
 
 
 ////////// PROBLEM 12 //////////
@@ -324,7 +343,8 @@ var colt = {
 */
 
 //Code Here
-
+devMountainEmployees = [joe, colt, ryan, cahlan];
+console.log(devMountainEmployees.length)
 
 
 /*
@@ -333,8 +353,13 @@ var colt = {
 */
 
 //Code Here
-
-
+function removeDude () {
+  for (i=0;i<devMountainEmployees.length;i++) {
+      if (devMountainEmployees[i] === cahlan) {
+        devMountainEmployees.splice(i,1)
+  }
+}};
+removeDude()
 
 ////////// PROBLEM 13 //////////
 
@@ -345,6 +370,23 @@ var colt = {
 */
 
 //Code Here
+let users = []
+
+let user2 = {
+    name: 'Bill',
+    email: 'Bill@Bill.com',
+    password: 'B1ll$',
+}
+let user3 = {
+  name: 'Butch',
+  email: 'Butch@Butch.com',
+  password: 'Chop',
+}
+let user4 = {
+  name: 'Bob',
+  email: 'Bob@Bob.com',
+  password: 'B0B',
+}
 
 
 
@@ -367,7 +409,7 @@ var user1 = {
 
 //Code Here
 
-
+users = [user1,user2,user3,user4];
 
 /*
   Now you have a very common data structure. 
@@ -380,9 +422,13 @@ var user1 = {
 */
 
 //Code Here
-
-
-
+function deleteUser(userDetail) {
+  if (users.includes(userDetail)) {
+    let target = users.indexOf(userDetail)
+    users.splice(target, 1)
+  }
+}
+deleteUser('mark.mciver@devmounta.in');
 /*
   The activity we just did is very much how data works in 'the real world'.
 */
