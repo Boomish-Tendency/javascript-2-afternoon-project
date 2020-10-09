@@ -195,11 +195,11 @@ each(names, function(item, indice){
 
 // Code here
 function getUserById (users, id, cb) {
-      users.forEach(element => {
-        if (element.id === id) {
-          cb(element)
-        }
-      })
+  users.forEach(element => {
+    if (element.id === id) {
+      cb(element)
+    }
+  })
 }
 // Do not edit the code below.
 var users = [

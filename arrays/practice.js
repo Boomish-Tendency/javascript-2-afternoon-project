@@ -153,14 +153,21 @@ var getRandomArbitrary = function() {
 //Code Here
 // function finder (arr) { 
 //     let randomNumber = getRandomArbitrary() 
-//     for (let i = 0; i < arr.length; i++){
-//       if (randomNumber === arr[i]){
-//          true
-//       } else{
-//          false
-//       }
+//     if(arr.includes(randomNumber)) {
+//       return true
+//     }else {
+//       return false
 //     }
-//   };
+// }
+function finder (arr) { 
+  let randomNumber = getRandomArbitrary() 
+  if(arr.includes(randomNumber)) {
+    return true
+  }else {
+    return false
+  }
+}
+  
 
 ////////// PROBLEM 8 //////////
 
@@ -188,7 +195,26 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem (myGroceryList, item) {
+  if (myGroceryList && item){
+    for (i=0;i<myGroceryList.length;i++) {
+    if (myGroceryList[i] === item) {
+      myGroceryList.splice(myGroceryList[i],1)
+    }
+  } return myGroceryList}
+ else {
+    return []
+}};
 
+function addItem (myGroceryList, item){
+    if (myGroceryList && item){
+      myGroceryList.push(item)
+      return myGroceryList
+    }  
+    else {
+      return []
+    }
+}
 
 
 ////////// PROBLEM 9 //////////
@@ -198,7 +224,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
+function maker () {
+  newArray = [];
+  for (i=1; i<=215; i++) {
+    newArray.push(i)
+  } 
+  return newArray
+}
 
 
 ////////// PROBLEM 10 //////////
