@@ -421,14 +421,24 @@ users = [user1,user2,user3,user4];
   Once you find the array index he's located in, delete him from the array.
 */
 
+//things.findIndex(i => i.item === "chips"); // 3
+
 //Code Here
 function deleteUser(userDetail) {
   if (users.includes(userDetail)) {
-    let target = users.indexOf(userDetail)
+    let target = users.findIndex(i => i.email === userDetail)
     users.splice(target, 1)
   }
 }
 deleteUser('mark.mciver@devmounta.in');
+
+
+// for(i = 0; i < users.length; i++) {
+//     if(users[i].userDetail == userDetail) {          ///for whole objects not key-pairs.
+//         users.splice(i, 1);
+//         break;
+//     }
+// }
 /*
   The activity we just did is very much how data works in 'the real world'.
 */
