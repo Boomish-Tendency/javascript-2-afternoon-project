@@ -425,12 +425,17 @@ users = [user1,user2,user3,user4];
 
 //Code Here
 function deleteUser(userDetail) {
-  if (users.includes(userDetail)) {
-    let target = users.findIndex(i => i.email === userDetail)
-    users.splice(target, 1)
+  for (i = 0; i < users.length; i++) {
+    let result = users.findIndex((i) => i.email === userDetail);
+    console.log(result)
+    if (result !== -1) {
+      users.splice(result, 1);
+      console.log(users)
+    }
   }
 }
-deleteUser('mark.mciver@devmounta.in');
+
+deleteUser("mark.mciver@devmounta.in");
 
 
 // for(i = 0; i < users.length; i++) {
