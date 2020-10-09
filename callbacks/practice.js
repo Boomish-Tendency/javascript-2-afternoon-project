@@ -144,12 +144,23 @@ function uniq (arr, cb) {
 //   for(i = 0; i < arr.length; i++){
 //   for(y = i + 1; y < arr.length; y++){
 //   if(arr[i] === arr [y]){
-//   arr.splice(i,1) y--
+//   arr.splice(i,1) 
+//   y--
 //       }
 //     }
 //    } cb(arr)
 //   }
-
+// function uniq(arr, cb){
+//   let newArr = arr.slice()
+//   for (i = 0; i < arr.length; i++){
+//     for (j = i + 1; j < arr.length; j++){
+//       if (arr[i] === arr[j]){
+//         newArr.splice(i, 1) 
+//       }
+//     }
+//   }
+//   return cb(newArr)
+// }
 
 
 
@@ -161,6 +172,11 @@ function uniq (arr, cb) {
 */
 
 //Code Here 
+function each(arrayOfNames, cb){
+  arrayOfNames.forEach( (name, index) => {
+      cb(name, index);
+    })
+ };
 
 // Do not edit the code below.
 each(names, function(item, indice){
@@ -178,7 +194,13 @@ each(names, function(item, indice){
 */
 
 // Code here
-
+function getUserById (users, id, cb) {
+      users.forEach(element => {
+        if (element.id === id) {
+          cb(element)
+        }
+      })
+}
 // Do not edit the code below.
 var users = [
   {
